@@ -1,9 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import ControlPanel from './components/controlPanel';
 import KanbanBoard from './components/kanbanBoard';
-import { saveStateToLocalStorage, getStateFromLocalStorage } from './components/localStorageUtil';
+import {  getStateFromLocalStorage } from './components/localStorageUtil';
 
 
 function App() {

@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import { RiArrowDropDownLine } from "react-icons/ri";
-import { saveStateToLocalStorage, getStateFromLocalStorage } from './localStorageUtil';
+import { saveStateToLocalStorage } from './localStorageUtil';
 
 
 export default function ControlPanel({groupingOption,setGroupingOption,sortingOption,setSortingOption}){
