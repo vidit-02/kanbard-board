@@ -4,7 +4,7 @@ import { saveStateToLocalStorage } from './localStorageUtil';
 
 
 export default function ControlPanel({groupingOption,setGroupingOption,sortingOption,setSortingOption}){
-//  console.log({groupingOption,sortingOption});
+
   const [displayOptions, setDisplayOptions] = useState(false);
 
   const toggleDisplayOptions = () => {
@@ -19,7 +19,7 @@ export default function ControlPanel({groupingOption,setGroupingOption,sortingOp
 
   const handleSortingChange = (e) => {
     setSortingOption(e.target.value);
-    saveStateToLocalStorage('sortingOption', e.target.value);
+    saveStateToLocalStorage('sortingOption', e.target.value); // Save the selected Ordering option to local storage
   };
   return (
     <div className="container">
@@ -49,7 +49,6 @@ export default function ControlPanel({groupingOption,setGroupingOption,sortingOp
            </div>
          )}
        </div>
-       {/* Rest of your component */}
      </div>
   )
 }

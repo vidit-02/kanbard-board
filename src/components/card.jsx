@@ -3,6 +3,7 @@ import { TbProgressBolt,TbProgressAlert, TbProgressHelp, TbProgressCheck, TbProg
 import { FaUserCircle } from "react-icons/fa";
 
 export default function Card({id,userId,users,title,status}){
+  
    const filteredUser = users.find((user) => user.id === userId);
   return(
 

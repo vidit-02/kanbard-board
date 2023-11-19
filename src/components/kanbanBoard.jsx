@@ -8,7 +8,7 @@ import { TbAntennaBars3,TbAntennaBars2,TbAntennaBars1,TbAntennaBars4,TbProgressB
 
 
 export default function KanbanBoard({tickets,users,groupingOption,sortingOption}){
-  //  console.log({groupingOption,sortingOption,tickets});
+
   let renderColumns;
   let sortedTickets;
   const sortTickets = (tickets, sortingOption) => {
@@ -26,13 +26,16 @@ export default function KanbanBoard({tickets,users,groupingOption,sortingOption}
   if (groupingOption === 'status') {
     // Extracting unique statuses from tickets
     const statuses = [...new Set(tickets.map((ticket) => ticket.status))];
-    //Function to filter tickets by status
+
+
     sortedTickets=sortTickets(tickets,sortingOption);
+
+    //Function to filter tickets by status
     const filterTicketsByStatus = (status) => {
       return sortedTickets.filter((ticket) => ticket.status === status);
     };
 
-     // Rendering columns dynamically based on statuses
+    // Rendering columns dynamically based on statuses
     renderColumns = () => {
       return statuses.map((status) => (
         <div key={status} className="column">
@@ -60,8 +63,10 @@ export default function KanbanBoard({tickets,users,groupingOption,sortingOption}
       ));
     };
   } else if (groupingOption === 'user') {
-      // Function to filter tickets by userId
+
       sortedTickets=sortTickets(tickets,sortingOption);
+
+    // Function to filter tickets by userId
     const filterTicketsByUserId = (userId) => {
       return sortedTickets.filter((ticket) => ticket.userId === userId);
     };
@@ -89,11 +94,13 @@ export default function KanbanBoard({tickets,users,groupingOption,sortingOption}
   };
 } else if (groupingOption === 'priority') {
 
-  // Extracting unique statuses from tickets
+  // Extracting unique priorities from tickets
    const priorities = [...new Set(tickets.map((ticket) => ticket.priority))];
    const prioTitle={4:"Urgent", 3:"High",2:"Medium", 1:"Low", 0:"No Priority"}
-      // Function to filter tickets by userId
+
     sortedTickets=sortTickets(tickets,sortingOption);
+
+    // Function to filter tickets by priority
     const filterTicketsByPriority = (priority) => {
       return sortedTickets.filter((ticket) => ticket.priority === priority);
     };

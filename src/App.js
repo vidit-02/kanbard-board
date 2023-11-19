@@ -9,8 +9,10 @@ function App() {
   const [tickets, setTickets] = useState([]);
   const [users,setUsers]=useState([]);
   const [groupingOption, setGroupingOption] = useState('priority'); // default grouping option
-  const [sortingOption, setSortingOption] = useState(''); // default sorting option
+  const [sortingOption, setSortingOption] = useState(''); // default Ordering option
 
+
+  //function to fetch the data from the given API
   const fetchData = async () => {
    try {
      const response = await fetch('https://api.quicksell.co/v1/internal/frontend-assignment');
@@ -37,6 +39,8 @@ function App() {
   }
    fetchData(); // Fetch data when the component mounts
  }, []);
+
+ 
   return (
     <div>
     <ControlPanel
