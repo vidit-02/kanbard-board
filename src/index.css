@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  background-color: whitesmoke;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.controlPanel{
+  background-color: gainsboro;
+  padding: 15px;
+  position: relative;
+}
+.display-button{
+  display:flex;
+  align-items: center;
+}
+.button-text{
+  padding-right: 5px;
+}
+.options-block {
+  position: absolute;
+  top: 90%; /* Adjust this value to place the options above */
+  left: 15px;
+  background-color: white;
+  border: 2px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1;
+}
+.display-option{
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.labels,.options{
+  padding-right: 45px;
+}
+.kanbanBoard{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Five equal columns */
+    gap: 10px; /* Gap between columns */
+}
+.column {
+  background-color: #f4f4f4;
+  padding: 5px;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: space-between;
+}
+.card {
+  background-color: white;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* style for column head */
+.column-head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top:  15px;
+  padding-bottom: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.col-logo{
+  display: flex;
+ align-items: center; /* Aligns items vertically */
+
+}
+.col-title{
+  padding-left:  5px;
+
+}
+/* Style for rows inside the card */
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+.profile-pic-container {
+  position: relative;
+  padding-top: 5px;
+  width: 40px; /* Adjust according to your layout */
+  height: 40px; /* Adjust according to your layout */
+}
+.online-indicator-active {
+  position: absolute;
+  bottom: 12px; /* Adjust position as needed */
+  right: 20px; /* Adjust position as needed */
+  width: 8px;
+  height: 8px;
+  border-radius: 50%; /* Makes the indicator circular */
+  background-color: green; /* Change color based on online status */
+  border: 2px solid white; /* Add a border for better visibility */
+}
+.online-indicator-inactive {
+  position: absolute;
+  bottom: 12px; /* Adjust position as needed */
+  right: 20px; /* Adjust position as needed */
+  width: 8px;
+  height: 8px;
+  border-radius: 50%; /* Makes the indicator circular */
+  background-color: grey; /* Change color based on online status */
+  border: 2px solid white; /* Add a border for better visibility */
+}
+.row-mid{
+    display: flex;
+    margin-bottom: 2px;
+}
+/* Style for card number */
+.feature-request{
+  background-color: grey;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+}
+.card-number {
+  font-size: 15px;
+  color: grey;
+}
+
+/* Style for profile picture */
+.profile-pic img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Style for card title */
+.card-title {
+  font-size: 15px;
+  color: black;
+  padding-left: 5px;
+  padding-bottom: 1px;
+}
+
+/* Style for outline box */
+.outline-box {
+  border: 1px solid lightgrey;
+  border-radius: 8px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
