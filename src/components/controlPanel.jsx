@@ -41,7 +41,7 @@ export default function ControlPanel({groupingOption,setGroupingOption,sortingOp
             <div className="display-option" >
              <label htmlFor="sorting">Ordering:</label>
              <select className="options" id="sorting" value={sortingOption} onChange={handleSortingChange}>
-               <option value="" disabled>select</option>
+               <option value="" style={{display: 'none'}} disabled>select</option>
                <option value="priority">Priority</option>
                <option value="title">Title</option>
              </select>
